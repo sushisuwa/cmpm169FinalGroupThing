@@ -30,6 +30,35 @@
     <script type="text/javascript" src="./js/project.js" DEFER></script>
     <!-- Use me for a p5.js project -->
     <script type="text/javascript" src="./js/sketch.js" DEFER></script>
+
+    <!-- Add custom CSS for the plotlyDiv container -->
+    <style>
+        /* Add these styles for the plotlyDiv to take up the whole page */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #plotlyDiv {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plotly-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .root-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
     <!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
@@ -40,15 +69,18 @@
 
             <div class="minor-section">
                 <h2>Is this a dream?</h2>
-                <div id="plotlyDiv" style="position: relative;">
+                <div id="plotlyDiv" class="plotly-container">
                     <!-- Plotly.js container -->
-                    <div id="standImageContainer" class="root-background" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <div id="standImageContainer" class="root-background">
                         <!-- Image container -->
-                        <img id="standImage" src="https://saliao.github.io/p5.js-files/Transparent.png" style="max-width: 100%; max-height: 100%;">
+                        <img id="standImage" src="https://saliao.github.io/p5.js-files/Transparent.png">
                     </div>
                 </div>
             </div>
         </section>
+        <a href="../../index.html">
+            <button class="dreambutton">Next Dream</button>
+          </a>
         <nav id="links">
             <!-- Put links to other pages (including the homepage) here. -->
         </nav>
