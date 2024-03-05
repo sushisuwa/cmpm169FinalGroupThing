@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This title is used for tabs and bookmarks -->
+    <title>Dream :3</title>
+
+    <!-- Use UTF character set, a good idea with any webpage -->
+    <meta charset="UTF-8" />
+    <!-- Set viewport so page remains consistently scaled w narrow devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Include CSS file, including a site-wide CSS and for this particular page -->
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Load jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- Load p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+   
+    
+    <!-- Load D3.js library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Load Plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
+
+    <!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <!-- Use me for a JavaScript OOP Project -->
+    <script type="text/javascript" src="./js/project.js" DEFER></script>
+    <!-- Use me for a p5.js project -->
+    <script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+    <!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+    <main id="content">
+        <section>
+            <h1>JOJOS Stands</h1>
+            
+
+            <div class="minor-section">
+                <h2>Is this a dream?</h2>
+                <div id="plotlyDiv" style="position: relative;">
+                    <!-- Plotly.js container -->
+                    <div id="standImageContainer" class="root-background" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <!-- Image container -->
+                        <img id="standImage" src="https://saliao.github.io/p5.js-files/Transparent.png" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav id="links">
+            <!-- Put links to other pages (including the homepage) here. -->
+        </nav>
+    </main>
+</body>
+</html>
