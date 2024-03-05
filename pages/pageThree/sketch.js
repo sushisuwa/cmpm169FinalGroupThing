@@ -1,12 +1,12 @@
 
 function setup() {
-    createCanvas(550, 550);
-    strokeCap(SQUARE);
+    createCanvas(windowWidth, windowHeight);
+    // /strokeCap(SQUARE);
   }
   
   function draw() {
     background(255);
-    translate(width / 2, height / 2);
+    translate(windowWidth / 2, windowHeight / 2);
   
     var circleResolution = int(map(mouseY, 0, height, 2, 80));
     var radius = mouseX - width / 2;
