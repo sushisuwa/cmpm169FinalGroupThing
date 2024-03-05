@@ -10,9 +10,9 @@ function setup() {
 
     var thing = noise(mouseY * 1.5)
   
-    var circleResolution = int(map(mouseY, 0, height, 2, 80));
-    var radius = mouseX - width / 2;
-    var angle = (TAU / circleResolution) * thing                                                                                                                                                                            ;
+    var circleResolution = int(map(mouseY, 0, height, 2, 80)) * thing;
+    var radius = (mouseX - width / 2) * thing;
+    var angle = (TAU / circleResolution)                                                                                                                                                                            ;
   
     fill(mouseX, mouseY, mouseX/2);
     
