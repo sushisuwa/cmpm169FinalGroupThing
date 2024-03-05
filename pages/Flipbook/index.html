@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Book</title>
+</head>
+<body>
+    <h1>Dream Journal</h1>
+    <button onclick="prevPage()">Previous</button>
+    <span id="pageNumber"></span>
+    <button onclick="nextPage()">Next</button>
+
+    <div id="iframeContainer">
+        <iframe id="pageFrame" src="" frameborder="0" width="100%" height="800"></iframe>
+    </div>
+
+    <script>
+        var pages = ['https://sushisuwa.github.io/cmpm169FinalGroupThing/pages/pageOne/index.html',
+         'https://sushisuwa.github.io/cmpm169FinalGroupThing/pages/pageTwo/index.html',
+         'https://sushisuwa.github.io/cmpm169FinalGroupThing/pages/pageThree/index.html',
+         'https://sushisuwa.github.io/cmpm169FinalGroupThing/pages/pageFour/index.html'];
+        var currentPageIndex = 0;
+
+        function updatePageNumber() {
+            document.getElementById('pageNumber').innerText = "Page " + (currentPageIndex + 1) + " of " + pages.length;
+        }
+
+        function nextPage() {
+            currentPageIndex = (currentPageIndex + 1) % pages.length;
+            showPage(pages[currentPageIndex]);
+            updatePageNumber();
+        }
+
+        function prevPage() {
+            currentPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
+            showPage(pages[currentPageIndex]);
+            updatePageNumber();
+        }
+
+        function showPage(url) {
+            document.getElementById('pageFrame').src = url;
+        }
+
+        // Initial page display
+        showPage(pages[currentPageIndex]);
+
+        // Initial page number update
+        updatePageNumber();
+    </script>
+</body>
+</html>
